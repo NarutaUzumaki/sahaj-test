@@ -1,0 +1,216 @@
+.journey-starts {
+  background-image: url("../img/journey-starts-bg.png");
+  background-position-y: 100%;
+  background-size: cover;
+  padding: 100px 0;
+  margin-bottom: 91px;
+  .container {
+    position: relative;
+  }
+  .program-details {
+    position: absolute;
+    right: 0;
+    top: -140px;
+    width: 458px;
+    padding: 30px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 25px 0 rgba(61, 139, 232, 0.2);
+    border: solid 1px #e9e9e9;
+    background-color: #ffffff;
+    &__title {
+      font-size: 22px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #31364e;
+      margin-bottom: 15px;
+    }
+    
+    &__schedule {
+      &:not(:last-child) {
+        margin-bottom: 7px;
+      }
+      span {
+        display: block;
+      }
+      &-date {
+        font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: normal;
+        color: #6f7283;
+      }
+      &-time {
+        font-size: 16px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: normal;
+        color: #6f7283;
+      }
+    }
+  }
+  &__title {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  &__step {
+    display: flex;
+    position: relative;
+    &-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin-right: 15px;
+      width: 30px;
+      height: 30px;
+      box-shadow: 0 2px 10px 0 rgba(61, 139, 232, 0.1);
+      background-color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.1;
+      letter-spacing: normal;
+      text-align: center;
+      color: #31364e;
+      z-index: 3;
+    }
+    &:not(:last-child) {
+      padding-bottom: 30px;
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 1px;
+        bottom: 0;
+        left: 15px;
+        border-left: 1px dotted white;
+        z-index: 1;
+      }
+    }
+    &-title {
+      font-size: 20px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: normal;
+      color: #31364e;
+      margin-bottom: 13px;
+    }
+    &-text {
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      color: #31364e;
+    }
+  }
+  &__detail {
+    width: 458px;
+  }
+  
+}
+
+@media screen and (max-width: 1199px) {
+  .journey-starts {
+    .program-details {
+      top: -160px;
+      width: 350px;
+      padding: 30px 20px;
+      &__title {
+        font-size: 18px;
+      }
+      &__schedule {
+        &-date {
+          font-size: 14px;
+        }
+        &-time {
+          font-size: 14px;
+        }
+      }
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__step {
+      &-number {
+        font-size: 20px;
+      }
+      &-title {
+        font-size: 18px;
+      }
+      &-text {
+        font-size: 14px;
+      }
+    }
+    &__detail {
+      width: 390px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .journey-starts {
+    margin-bottom: 81px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .journey-starts {
+    padding: 40px 0 80px 0;
+    margin-bottom: 75px;
+
+    .program-details {
+      position: relative;
+      top: unset;
+      right: unset;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .journey-starts {
+    &__step {
+      &-number {
+        min-width: 10px;
+        width: 10px;
+        height: 10px;
+        margin-top: 4px;
+        margin-right: 10px;
+        span {
+          display: none;
+        }
+      }
+      &:not(:last-child) {
+        padding-bottom: 20px;
+        &::after {
+          left: 5px;
+          bottom: -4px;
+        }
+      }
+      &-title {
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      &-text {
+        font-size: 14px;
+      }
+    }
+    &__detail {
+      width: 100%;
+    }
+  }
+}
